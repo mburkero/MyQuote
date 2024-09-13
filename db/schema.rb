@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_13_043019) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_13_050122) do
+  create_table "authors", force: :cascade do |t|
+    t.string "authFname"
+    t.string "authLname"
+    t.string "authByear"
+    t.string "authDyear"
+    t.text "biography"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_authors_on_user_id"
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string "categoryName"
     t.datetime "created_at", null: false
@@ -31,4 +43,5 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_13_043019) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "authors", "users"
 end
