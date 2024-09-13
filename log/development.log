@@ -65,3 +65,95 @@ FOREIGN KEY ("category_id")
   [1m[36mTRANSACTION (33.6ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to QuoteChanges (20240913063723)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquotes" ("id" integer NOT NULL PRIMARY KEY, "quoteText" text NOT NULL, "dateOfAddition" datetime(6) NOT NULL, "yearOfPublication" varchar DEFAULT NULL, "comment" text DEFAULT NULL, "isQuotePublic" boolean DEFAULT 1, "user_id" integer NOT NULL, "quote_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquotes_on_quote_id" ON "aquotes" ("quote_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquotes_on_user_id" ON "aquotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aquotes" ("id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","quote_id","created_at","updated_at")
+                     SELECT "id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","quote_id","created_at","updated_at" FROM "quotes"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "quotes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "quotes" ("id" integer NOT NULL PRIMARY KEY, "quoteText" text NOT NULL, "dateOfAddition" datetime(6) NOT NULL, "yearOfPublication" varchar DEFAULT NULL, "comment" text DEFAULT NULL, "isQuotePublic" boolean DEFAULT 1, "user_id" integer NOT NULL, "quote_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02b555fb4d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quotes_on_user_id" ON "quotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quotes_on_quote_id" ON "quotes" ("quote_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "quotes" ("id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","quote_id","created_at","updated_at")
+                     SELECT "id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","quote_id","created_at","updated_at" FROM "aquotes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aquotes"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquotes" ("id" integer NOT NULL PRIMARY KEY, "quoteText" text NOT NULL, "dateOfAddition" datetime(6) NOT NULL, "yearOfPublication" varchar DEFAULT NULL, "comment" text DEFAULT NULL, "isQuotePublic" boolean DEFAULT 1, "user_id" integer NOT NULL, "quote_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquotes_on_quote_id" ON "aquotes" ("quote_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquotes_on_user_id" ON "aquotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aquotes" ("id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","quote_id","created_at","updated_at")
+                     SELECT "id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","quote_id","created_at","updated_at" FROM "quotes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "quotes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "quotes" ("id" integer NOT NULL PRIMARY KEY, "quoteText" text NOT NULL, "dateOfAddition" datetime(6) NOT NULL, "yearOfPublication" varchar DEFAULT NULL, "comment" text DEFAULT NULL, "isQuotePublic" boolean DEFAULT 1, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02b555fb4d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quotes_on_user_id" ON "quotes" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "quotes" ("id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at")
+                     SELECT "id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at" FROM "aquotes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aquotes"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquotes" ("id" integer NOT NULL PRIMARY KEY, "quoteText" text NOT NULL, "dateOfAddition" datetime(6) NOT NULL, "yearOfPublication" varchar DEFAULT NULL, "comment" text DEFAULT NULL, "isQuotePublic" boolean DEFAULT 1, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquotes_on_user_id" ON "aquotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aquotes" ("id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at")
+                     SELECT "id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at" FROM "quotes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "quotes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "quotes" ("id" integer NOT NULL PRIMARY KEY, "quoteText" text NOT NULL, "dateOfAddition" datetime(6) NOT NULL, "yearOfPublication" varchar DEFAULT NULL, "comment" text DEFAULT NULL, "isQuotePublic" boolean DEFAULT 1, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "author_id" integer NOT NULL, CONSTRAINT "fk_rails_02b555fb4d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quotes_on_user_id" ON "quotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "quotes" ("id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at")
+                     SELECT "id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at" FROM "aquotes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aquotes"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quotes_on_author_id" ON "quotes" ("author_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquotes" ("id" integer NOT NULL PRIMARY KEY, "quoteText" text NOT NULL, "dateOfAddition" datetime(6) NOT NULL, "yearOfPublication" varchar DEFAULT NULL, "comment" text DEFAULT NULL, "isQuotePublic" boolean DEFAULT 1, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "author_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquotes_on_author_id" ON "aquotes" ("author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquotes_on_user_id" ON "aquotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aquotes" ("id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at","author_id")
+                     SELECT "id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at","author_id" FROM "quotes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "quotes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "quotes" ("id" integer NOT NULL PRIMARY KEY, "quoteText" text NOT NULL, "dateOfAddition" datetime(6) NOT NULL, "yearOfPublication" varchar DEFAULT NULL, "comment" text DEFAULT NULL, "isQuotePublic" boolean DEFAULT 1, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "author_id" integer NOT NULL, CONSTRAINT "fk_rails_02b555fb4d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_3d9d6db8c2"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quotes_on_user_id" ON "quotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quotes_on_author_id" ON "quotes" ("author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "quotes" ("id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at","author_id")
+                     SELECT "id","quoteText","dateOfAddition","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at","author_id" FROM "aquotes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aquotes"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240913063723"]]
+  [1m[36mTRANSACTION (18.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

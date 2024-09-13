@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_13_054432) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_13_063723) do
   create_table "authors", force: :cascade do |t|
     t.string "authFname"
     t.string "authLname"
@@ -46,10 +46,10 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_13_054432) do
     t.text "comment"
     t.boolean "isQuotePublic", default: true
     t.integer "user_id", null: false
-    t.integer "quote_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["quote_id"], name: "index_quotes_on_quote_id"
+    t.integer "author_id", null: false
+    t.index ["author_id"], name: "index_quotes_on_author_id"
     t.index ["user_id"], name: "index_quotes_on_user_id"
   end
 
@@ -69,6 +69,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_13_054432) do
   add_foreign_key "authors", "users"
   add_foreign_key "quote_categories", "categories"
   add_foreign_key "quote_categories", "quotes"
-  add_foreign_key "quotes", "quotes"
+  add_foreign_key "quotes", "authors"
   add_foreign_key "quotes", "users"
 end
