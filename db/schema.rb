@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_13_050122) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_13_054432) do
   create_table "authors", force: :cascade do |t|
     t.string "authFname"
     t.string "authLname"
@@ -30,6 +30,29 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_13_050122) do
     t.index ["categoryName"], name: "index_categories_on_categoryName", unique: true
   end
 
+  create_table "quote_categories", force: :cascade do |t|
+    t.integer "quote_id", null: false
+    t.integer "category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_quote_categories_on_category_id"
+    t.index ["quote_id"], name: "index_quote_categories_on_quote_id"
+  end
+
+  create_table "quotes", force: :cascade do |t|
+    t.text "quoteText", null: false
+    t.datetime "dateOfAddition", null: false
+    t.string "yearOfPublication"
+    t.text "comment"
+    t.boolean "isQuotePublic", default: true
+    t.integer "user_id", null: false
+    t.integer "quote_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["quote_id"], name: "index_quotes_on_quote_id"
+    t.index ["user_id"], name: "index_quotes_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "fname", null: false
     t.string "lname", null: false
@@ -44,4 +67,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_13_050122) do
   end
 
   add_foreign_key "authors", "users"
+  add_foreign_key "quote_categories", "categories"
+  add_foreign_key "quote_categories", "quotes"
+  add_foreign_key "quotes", "quotes"
+  add_foreign_key "quotes", "users"
 end

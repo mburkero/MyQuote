@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :quote_categories
   resources :quotes
   resources :authors
   resources :categories
