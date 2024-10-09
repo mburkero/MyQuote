@@ -10,19 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_10_09_094841) do
+ActiveRecord::Schema[7.0].define(version: 2024_10_09_101000) do
   create_table "authors", force: :cascade do |t|
-    t.string "authFname"
-    t.string "authLname"
     t.string "authByear"
     t.string "authDyear"
     t.text "biography"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "authName", null: false
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string "categoryName"
+    t.string "categoryName", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["categoryName"], name: "index_categories_on_categoryName", unique: true
