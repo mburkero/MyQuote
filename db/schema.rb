@@ -10,17 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_13_063723) do
+ActiveRecord::Schema[7.0].define(version: 2024_10_09_094841) do
   create_table "authors", force: :cascade do |t|
     t.string "authFname"
     t.string "authLname"
     t.string "authByear"
     t.string "authDyear"
     t.text "biography"
-    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_authors_on_user_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -41,7 +39,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_13_063723) do
 
   create_table "quotes", force: :cascade do |t|
     t.text "quoteText", null: false
-    t.datetime "dateOfAddition", null: false
     t.string "yearOfPublication"
     t.text "comment"
     t.boolean "isQuotePublic", default: true
@@ -58,7 +55,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_13_063723) do
     t.string "lname", null: false
     t.string "email", null: false
     t.string "password_digest", null: false
-    t.string "passwordSalt", null: false
     t.boolean "isAdmin", null: false
     t.string "status", null: false
     t.datetime "created_at", null: false
@@ -66,7 +62,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_13_063723) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  add_foreign_key "authors", "users"
   add_foreign_key "quote_categories", "categories"
   add_foreign_key "quote_categories", "quotes"
   add_foreign_key "quotes", "authors"
