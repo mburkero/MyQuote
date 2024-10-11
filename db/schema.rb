@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_10_09_101000) do
+ActiveRecord::Schema[7.0].define(version: 2024_10_09_102127) do
   create_table "authors", force: :cascade do |t|
     t.string "authByear"
     t.string "authDyear"

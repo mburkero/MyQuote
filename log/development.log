@@ -567,3 +567,203 @@ Migrating to NullConstraints (20241009102127)
   [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("categoryName", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["categoryName", "Miscellaneous"], ["created_at", "2024-10-11 06:45:23.719132"], ["updated_at", "2024-10-11 06:45:23.719132"]]
   [1m[36mTRANSACTION (19.6ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to NullConstraints (20241009102127)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to NullConstraints (20241009102127)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aauthors" ("id" integer NOT NULL PRIMARY KEY, "authByear" varchar DEFAULT NULL, "authDyear" varchar DEFAULT NULL, "biography" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "authName" varchar NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aauthors" ("id","authByear","authDyear","biography","created_at","updated_at","authName")
+                     SELECT "id","authByear","authDyear","biography","created_at","updated_at","authName" FROM "authors"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "authors"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer NOT NULL PRIMARY KEY, "authByear" varchar DEFAULT NULL, "authDyear" varchar DEFAULT NULL, "biography" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "authName" varchar NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "authors" ("id","authByear","authDyear","biography","created_at","updated_at","authName")
+                     SELECT "id","authByear","authDyear","biography","created_at","updated_at","authName" FROM "aauthors"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aauthors"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to NullConstraints (20241009102127)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aauthors" ("id" integer NOT NULL PRIMARY KEY, "authByear" varchar DEFAULT NULL, "authDyear" varchar DEFAULT NULL, "biography" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "authName" varchar NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aauthors" ("id","authByear","authDyear","biography","created_at","updated_at","authName")
+                     SELECT "id","authByear","authDyear","biography","created_at","updated_at","authName" FROM "authors"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "authors"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer NOT NULL PRIMARY KEY, "authByear" varchar DEFAULT NULL, "authDyear" varchar DEFAULT NULL, "biography" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "authName" varchar NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "authors" ("id","authByear","authDyear","biography","created_at","updated_at","authName")
+                     SELECT "id","authByear","authDyear","biography","created_at","updated_at","authName" FROM "aauthors"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aauthors"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to NullConstraints (20241009102127)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aauthors" ("id" integer NOT NULL PRIMARY KEY, "authByear" varchar DEFAULT NULL, "authDyear" varchar DEFAULT NULL, "biography" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "authName" varchar NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aauthors" ("id","authByear","authDyear","biography","created_at","updated_at","authName")
+                     SELECT "id","authByear","authDyear","biography","created_at","updated_at","authName" FROM "authors"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "authors"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer NOT NULL PRIMARY KEY, "authByear" varchar DEFAULT NULL, "authDyear" varchar DEFAULT NULL, "biography" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "authName" varchar NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "authors" ("id","authByear","authDyear","biography","created_at","updated_at","authName")
+                     SELECT "id","authByear","authDyear","biography","created_at","updated_at","authName" FROM "aauthors"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aauthors"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aauthors" ("id" integer NOT NULL PRIMARY KEY, "authByear" varchar DEFAULT NULL, "authDyear" varchar DEFAULT NULL, "biography" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "authName" varchar NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aauthors" ("id","authByear","authDyear","biography","created_at","updated_at","authName")
+                     SELECT "id","authByear","authDyear","biography","created_at","updated_at","authName" FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "authors"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer NOT NULL PRIMARY KEY, "authByear" varchar DEFAULT NULL, "authDyear" varchar DEFAULT NULL, "biography" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "authName" varchar NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "authors" ("id","authByear","authDyear","biography","created_at","updated_at","authName")
+                     SELECT "id","authByear","authDyear","biography","created_at","updated_at","authName" FROM "aauthors"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aauthors"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aauthors" ("id" integer NOT NULL PRIMARY KEY, "authByear" varchar DEFAULT NULL, "authDyear" varchar DEFAULT NULL, "biography" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "authName" varchar NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aauthors" ("id","authByear","authDyear","biography","created_at","updated_at","authName")
+                     SELECT "id","authByear","authDyear","biography","created_at","updated_at","authName" FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "authors"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer NOT NULL PRIMARY KEY, "authByear" varchar DEFAULT NULL, "authDyear" varchar DEFAULT NULL, "biography" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "authName" varchar NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "authors" ("id","authByear","authDyear","biography","created_at","updated_at","authName")
+                     SELECT "id","authByear","authDyear","biography","created_at","updated_at","authName" FROM "aauthors"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aauthors"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aauthors" ("id" integer NOT NULL PRIMARY KEY, "authByear" varchar DEFAULT NULL, "authDyear" varchar DEFAULT NULL, "biography" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "authName" varchar NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aauthors" ("id","authByear","authDyear","biography","created_at","updated_at","authName")
+                     SELECT "id","authByear","authDyear","biography","created_at","updated_at","authName" FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "authors"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer NOT NULL PRIMARY KEY, "authByear" varchar DEFAULT NULL, "authDyear" varchar DEFAULT NULL, "biography" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "authName" varchar NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "authors" ("id","authByear","authDyear","biography","created_at","updated_at","authName")
+                     SELECT "id","authByear","authDyear","biography","created_at","updated_at","authName" FROM "aauthors"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aauthors"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acategories" ("id" integer NOT NULL PRIMARY KEY, "categoryName" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_acategories_on_categoryName" ON "acategories" ("categoryName")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "acategories" ("id","categoryName","created_at","updated_at")
+                     SELECT "id","categoryName","created_at","updated_at" FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer NOT NULL PRIMARY KEY, "categoryName" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_categories_on_categoryName" ON "categories" ("categoryName")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("id","categoryName","created_at","updated_at")
+                     SELECT "id","categoryName","created_at","updated_at" FROM "acategories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "acategories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquotes" ("id" integer NOT NULL PRIMARY KEY, "quoteText" text NOT NULL, "yearOfPublication" varchar DEFAULT NULL, "comment" text DEFAULT NULL, "isQuotePublic" boolean DEFAULT 1, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "author_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquotes_on_author_id" ON "aquotes" ("author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquotes_on_user_id" ON "aquotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aquotes" ("id","quoteText","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at","author_id")
+                     SELECT "id","quoteText","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at","author_id" FROM "quotes"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "quotes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "quotes" ("id" integer NOT NULL PRIMARY KEY, "quoteText" text NOT NULL, "yearOfPublication" varchar DEFAULT NULL, "comment" text DEFAULT NULL, "isQuotePublic" boolean DEFAULT 1, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "author_id" integer NOT NULL, CONSTRAINT "fk_rails_02b555fb4d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_3d9d6db8c2"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quotes_on_user_id" ON "quotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quotes_on_author_id" ON "quotes" ("author_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "quotes" ("id","quoteText","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at","author_id")
+                     SELECT "id","quoteText","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at","author_id" FROM "aquotes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aquotes"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquotes" ("id" integer NOT NULL PRIMARY KEY, "quoteText" text NOT NULL, "yearOfPublication" varchar DEFAULT NULL, "comment" text DEFAULT NULL, "isQuotePublic" boolean DEFAULT 1, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "author_id" integer NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_aquotes_on_author_id" ON "aquotes" ("author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquotes_on_user_id" ON "aquotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aquotes" ("id","quoteText","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at","author_id")
+                     SELECT "id","quoteText","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at","author_id" FROM "quotes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "quotes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "quotes" ("id" integer NOT NULL PRIMARY KEY, "quoteText" text NOT NULL, "yearOfPublication" varchar DEFAULT NULL, "comment" text DEFAULT NULL, "isQuotePublic" boolean DEFAULT 1, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "author_id" integer NOT NULL, CONSTRAINT "fk_rails_3d9d6db8c2"
+FOREIGN KEY ("author_id")
+  REFERENCES "authors" ("id")
+, CONSTRAINT "fk_rails_02b555fb4d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quotes_on_user_id" ON "quotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quotes_on_author_id" ON "quotes" ("author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "quotes" ("id","quoteText","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at","author_id")
+                     SELECT "id","quoteText","yearOfPublication","comment","isQuotePublic","user_id","created_at","updated_at","author_id" FROM "aquotes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aquotes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20241009102127"]]
+  [1m[36mTRANSACTION (30.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-10-11 07:23:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/student/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/student/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.0ms | Allocations: 633)
+Completed 200 OK in 49ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 7467)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-11 07:26:01 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/student/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/student/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.1ms | Allocations: 489)
+Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4335)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-11 07:26:03 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/student/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/student/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 272)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 916)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-10-11 07:30:00 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/about"):
+  
+Started GET "/" for 127.0.0.1 at 2024-10-11 07:30:11 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/student/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/student/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 221)
+
+

@@ -65,6 +65,6 @@ class AuthorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def author_params
-      params.require(:author).permit(:authFname, :authLname, :authByear, :authDyear, :biography, :user_id)
+      params.require(:author).permit(:authName, :authByear, :authDyear, :biography)
     end
 end

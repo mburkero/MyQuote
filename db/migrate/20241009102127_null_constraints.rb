@@ -1,16 +1,16 @@
 class NullConstraints < ActiveRecord::Migration[7.0]
   def change
     #changing nulls on authors
-    change_column :authors, :authByear, null:true
-    change_column :authors, :authDyear, null:true
-    change_column :authors, :biography, null:true
-    change_column :authors, :authName, null:false
+    change_column_null(:authors, :authByear, true)
+    change_column_null(:authors, :authDyear, true)
+    change_column_null(:authors, :biography, true)
+    change_column_null(:authors, :authName, false)
 
     #changing null on categories
-    change_column :categories, :categoryName, null:false
+    change_column_null(:categories, :categoryName, false)
     
     #changing nulls on quotes
-    change_column :quotes, :yearOfPublication, null:true
-    change_column :quotes, :comment, null:true
+    change_column_null(:quotes, :yearOfPublication, null:true)
+    change_column_null(:quotes, :comment, null:true)
   end
 end
