@@ -520,3 +520,50 @@ FOREIGN KEY ("user_id")
 Migrating to NullConstraints (20241009102127)
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Migrating to NullConstraints (20241009102127)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "isAdmin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "John"], ["lname", "Jones"], ["email", "admin@myquotes.com"], ["password_digest", "[FILTERED]"], ["isAdmin", 1], ["status", "Active"], ["created_at", "2024-10-11 06:16:58.379076"], ["updated_at", "2024-10-11 06:16:58.379076"]]
+  [1m[36mTRANSACTION (18.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "isAdmin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Vincent"], ["lname", "Brown"], ["email", "vinceb@myemail.com"], ["password_digest", "[FILTERED]"], ["isAdmin", 0], ["status", "Active"], ["created_at", "2024-10-11 06:20:21.941852"], ["updated_at", "2024-10-11 06:20:21.941852"]]
+  [1m[36mTRANSACTION (21.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."fname" = ? LIMIT ?[0m  [["fname", "John"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "isAdmin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "John"], ["lname", "Smith"], ["email", "jsmith@email.com"], ["password_digest", "[FILTERED]"], ["isAdmin", 0], ["status", "Active"], ["created_at", "2024-10-11 06:30:06.649859"], ["updated_at", "2024-10-11 06:30:06.649859"]]
+  [1m[36mTRANSACTION (23.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "isAdmin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Lucas"], ["lname", "Scott"], ["email", "lucasscott@email.com"], ["password_digest", "[FILTERED]"], ["isAdmin", 0], ["status", "Banned"], ["created_at", "2024-10-11 06:31:38.095744"], ["updated_at", "2024-10-11 06:31:38.095744"]]
+  [1m[36mTRANSACTION (14.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "isAdmin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Jane"], ["lname", "Doe"], ["email", "janedoe@email.com"], ["password_digest", "[FILTERED]"], ["isAdmin", 0], ["status", "Suspended"], ["created_at", "2024-10-11 06:32:45.362264"], ["updated_at", "2024-10-11 06:32:45.362264"]]
+  [1m[36mTRANSACTION (22.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("categoryName", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["categoryName", "Metaphysics"], ["created_at", "2024-10-11 06:40:06.197431"], ["updated_at", "2024-10-11 06:40:06.197431"]]
+  [1m[36mTRANSACTION (25.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("categoryName", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["categoryName", "Axiology"], ["created_at", "2024-10-11 06:40:28.545155"], ["updated_at", "2024-10-11 06:40:28.545155"]]
+  [1m[36mTRANSACTION (21.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("categoryName", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["categoryName", "Epistemology"], ["created_at", "2024-10-11 06:40:49.162254"], ["updated_at", "2024-10-11 06:40:49.162254"]]
+  [1m[36mTRANSACTION (21.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("categoryName", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["categoryName", "Logic"], ["created_at", "2024-10-11 06:43:07.134184"], ["updated_at", "2024-10-11 06:43:07.134184"]]
+  [1m[36mTRANSACTION (23.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("categoryName", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["categoryName", "Ethics"], ["created_at", "2024-10-11 06:43:25.137295"], ["updated_at", "2024-10-11 06:43:25.137295"]]
+  [1m[36mTRANSACTION (17.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("categoryName", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["categoryName", "Political Philosophy"], ["created_at", "2024-10-11 06:43:46.675347"], ["updated_at", "2024-10-11 06:43:46.675347"]]
+  [1m[36mTRANSACTION (31.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("categoryName", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["categoryName", "Aesthetics"], ["created_at", "2024-10-11 06:44:38.069813"], ["updated_at", "2024-10-11 06:44:38.069813"]]
+  [1m[36mTRANSACTION (20.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("categoryName", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["categoryName", "Last Words"], ["created_at", "2024-10-11 06:45:05.038118"], ["updated_at", "2024-10-11 06:45:05.038118"]]
+  [1m[36mTRANSACTION (16.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("categoryName", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["categoryName", "Miscellaneous"], ["created_at", "2024-10-11 06:45:23.719132"], ["updated_at", "2024-10-11 06:45:23.719132"]]
+  [1m[36mTRANSACTION (19.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
