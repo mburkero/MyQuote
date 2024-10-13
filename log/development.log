@@ -767,3 +767,1328 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 221)
 
 
+Started GET "/" for 127.0.0.1 at 2024-10-11 07:33:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 280.9ms | Allocations: 74524)
+Completed 200 OK in 293ms (Views: 284.1ms | ActiveRecord: 0.0ms | Allocations: 78548)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-13 07:58:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 106.6ms | Allocations: 31743)
+Completed 200 OK in 125ms (Views: 110.3ms | ActiveRecord: 0.0ms | Allocations: 35767)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-13 08:12:06 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 295)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 145)
+  Rendered layout layouts/application.html.erb (Duration: 55.6ms | Allocations: 31506)
+Completed 200 OK in 65ms (Views: 58.1ms | ActiveRecord: 0.0ms | Allocations: 35525)
+
+
+Started GET "/About" for 127.0.0.1 at 2024-10-13 08:18:51 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/About"):
+  
+Started GET "/About" for 127.0.0.1 at 2024-10-13 08:18:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/About"):
+  
+Started GET "/" for 127.0.0.1 at 2024-10-13 08:18:57 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 142)
+  Rendered layout layouts/application.html.erb (Duration: 105.6ms | Allocations: 31192)
+Completed 200 OK in 114ms (Views: 107.5ms | ActiveRecord: 0.0ms | Allocations: 33448)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-10-13 08:19:01 +0000
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 1735)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 2387)
+
+
+Started GET "/About" for 127.0.0.1 at 2024-10-13 08:19:09 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/About"):
+  
+Started GET "/" for 127.0.0.1 at 2024-10-13 08:25:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 295)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 388)
+  Rendered layout layouts/application.html.erb (Duration: 62.2ms | Allocations: 31783)
+Completed 200 OK in 85ms (Views: 66.4ms | ActiveRecord: 0.0ms | Allocations: 35816)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-13 08:27:03 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1625)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1890)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-13 08:27:05 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1626)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1892)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-13 08:27:07 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1610)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 1874)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-13 08:27:07 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1611)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 1876)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-10-13 08:27:08 +0000
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1831)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 2483)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-13 08:27:10 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1628)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1893)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-10-13 08:27:51 +0000
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1616)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1880)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-10-13 08:27:54 +0000
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1640)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1906)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-13 08:27:55 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1619)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1883)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-10-13 08:27:58 +0000
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1619)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1883)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-10-13 08:29:21 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 296)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 388)
+  Rendered layout layouts/application.html.erb (Duration: 96.6ms | Allocations: 31811)
+Completed 200 OK in 111ms (Views: 100.3ms | ActiveRecord: 0.0ms | Allocations: 35844)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-10-13 08:34:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 296)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 402)
+  Rendered layout layouts/application.html.erb (Duration: 79.9ms | Allocations: 31799)
+Completed 200 OK in 92ms (Views: 83.6ms | ActiveRecord: 0.0ms | Allocations: 35832)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-10-13 08:36:24 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 296)
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 1657)
+  Rendered layout layouts/application.html.erb (Duration: 91.9ms | Allocations: 33141)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 0.0ms | Allocations: 37121)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">MQ Home</a> -->
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+        <%= link_to "Home", root_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+        <li><a class="nav-link" href="#">Search</a></li>
+        </li>
+        <li class="nav-item">
+        <%= link_to "About", about_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+        <li><%= link_to 'Sign Up', new_user_path, class="nav-link" %></li>
+        </li>
+        <li class="nav-item">
+        <li><a class="nav-link" href="#">Sign In</a></li>
+        </li>
+        <li class="nav-item">
+        <li><a class="nav-link" href="#">Sign Out</a></li>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            User
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">My Account</a></li>
+            <li><a class="dropdown-item" href="#">My Quotes</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Add New Quote</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admin
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Admin Home</a></li>
+            <li><%= link_to 'Manage Users', users_path, class="dropdown-item" %></li>
+          </ul>
+        </li>
+
+        <!--
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+        -->
+      </ul>
+      <!--
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      -->
+    </div>
+  </div>
+
+):
+1:    <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+2:      <div class="container-fluid">
+3:        <!-- <a class="navbar-brand" href="#">MQ Home</a> -->
+4:        
+5:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+6:          <span class="navbar-toggler-icon"></span>
+7:        </button>
+8:        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+9:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+10:            <li class="nav-item">
+11:            <%= link_to "Home", root_path, class:"nav-link" %>
+12:            </li>
+13:            <li class="nav-item">
+14:            <li><a class="nav-link" href="#">Search</a></li>
+15:            </li>
+16:            <li class="nav-item">
+17:            <%= link_to "About", about_path, class:"nav-link" %>
+18:            </li>
+19:            <li class="nav-item">
+20:            <li><%= link_to 'Sign Up', new_user_path, class="nav-link" %></li>
+21:            </li>
+22:            <li class="nav-item">
+23:            <li><a class="nav-link" href="#">Sign In</a></li>
+24:            </li>
+25:            <li class="nav-item">
+26:            <li><a class="nav-link" href="#">Sign Out</a></li>
+27:            </li>
+28:            <li class="nav-item dropdown">
+29:              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+30:                User
+31:              </a>
+32:              <ul class="dropdown-menu">
+33:                <li><a class="dropdown-item" href="#">My Account</a></li>
+34:                <li><a class="dropdown-item" href="#">My Quotes</a></li>
+35:                <li><hr class="dropdown-divider"></li>
+36:                <li><a class="dropdown-item" href="#">Add New Quote</a></li>
+37:              </ul>
+38:            </li>
+39:    
+40:            <li class="nav-item dropdown">
+41:              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+42:                Admin
+43:              </a>
+44:              <ul class="dropdown-menu">
+45:                <li><a class="dropdown-item" href="#">Admin Home</a></li>
+46:                <li><%= link_to 'Manage Users', users_path, class="dropdown-item" %></li>
+47:              </ul>
+48:            </li>
+49:    
+50:            <!--
+51:            <li class="nav-item">
+52:              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+53:            </li>
+54:            -->
+55:          </ul>
+56:          <!--
+57:          <form class="d-flex" role="search">
+58:            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+59:            <button class="btn btn-outline-success" type="submit">Search</button>
+60:          </form>
+61:          -->
+62:        </div>
+63:      </div>
+  
+app/views/layouts/_header.html.erb:20: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:46: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:20: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:46: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:20: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:46: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:20: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:46: syntax error, unexpected '='
+app/views/layouts/application.html.erb:18
+Started GET "/about" for 127.0.0.1 at 2024-10-13 08:36:27 +0000
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 1295)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2813)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 3055)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">MQ Home</a> -->
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+        <%= link_to "Home", root_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+        <li><a class="nav-link" href="#">Search</a></li>
+        </li>
+        <li class="nav-item">
+        <%= link_to "About", about_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+        <li><%= link_to 'Sign Up', new_user_path, class="nav-link" %></li>
+        </li>
+        <li class="nav-item">
+        <li><a class="nav-link" href="#">Sign In</a></li>
+        </li>
+        <li class="nav-item">
+        <li><a class="nav-link" href="#">Sign Out</a></li>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            User
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">My Account</a></li>
+            <li><a class="dropdown-item" href="#">My Quotes</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Add New Quote</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admin
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Admin Home</a></li>
+            <li><%= link_to 'Manage Users', users_path, class="dropdown-item" %></li>
+          </ul>
+        </li>
+
+        <!--
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+        -->
+      </ul>
+      <!--
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      -->
+    </div>
+  </div>
+
+):
+1:    <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+2:      <div class="container-fluid">
+3:        <!-- <a class="navbar-brand" href="#">MQ Home</a> -->
+4:        
+5:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+6:          <span class="navbar-toggler-icon"></span>
+7:        </button>
+8:        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+9:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+10:            <li class="nav-item">
+11:            <%= link_to "Home", root_path, class:"nav-link" %>
+12:            </li>
+13:            <li class="nav-item">
+14:            <li><a class="nav-link" href="#">Search</a></li>
+15:            </li>
+16:            <li class="nav-item">
+17:            <%= link_to "About", about_path, class:"nav-link" %>
+18:            </li>
+19:            <li class="nav-item">
+20:            <li><%= link_to 'Sign Up', new_user_path, class="nav-link" %></li>
+21:            </li>
+22:            <li class="nav-item">
+23:            <li><a class="nav-link" href="#">Sign In</a></li>
+24:            </li>
+25:            <li class="nav-item">
+26:            <li><a class="nav-link" href="#">Sign Out</a></li>
+27:            </li>
+28:            <li class="nav-item dropdown">
+29:              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+30:                User
+31:              </a>
+32:              <ul class="dropdown-menu">
+33:                <li><a class="dropdown-item" href="#">My Account</a></li>
+34:                <li><a class="dropdown-item" href="#">My Quotes</a></li>
+35:                <li><hr class="dropdown-divider"></li>
+36:                <li><a class="dropdown-item" href="#">Add New Quote</a></li>
+37:              </ul>
+38:            </li>
+39:    
+40:            <li class="nav-item dropdown">
+41:              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+42:                Admin
+43:              </a>
+44:              <ul class="dropdown-menu">
+45:                <li><a class="dropdown-item" href="#">Admin Home</a></li>
+46:                <li><%= link_to 'Manage Users', users_path, class="dropdown-item" %></li>
+47:              </ul>
+48:            </li>
+49:    
+50:            <!--
+51:            <li class="nav-item">
+52:              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+53:            </li>
+54:            -->
+55:          </ul>
+56:          <!--
+57:          <form class="d-flex" role="search">
+58:            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+59:            <button class="btn btn-outline-success" type="submit">Search</button>
+60:          </form>
+61:          -->
+62:        </div>
+63:      </div>
+  
+app/views/layouts/_header.html.erb:20: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:46: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:20: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:46: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:20: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:46: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:20: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:46: syntax error, unexpected '='
+app/views/layouts/application.html.erb:18
+Started GET "/" for 127.0.0.1 at 2024-10-13 08:36:48 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 106)
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 1240)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2941)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 3567)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">MQ Home</a> -->
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+        <%= link_to "Home", root_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+        <li><a class="nav-link" href="#">Search</a></li>
+        </li>
+        <li class="nav-item">
+        <%= link_to "About", about_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+        <li><%= link_to 'Sign Up', new_user_path, class="nav-link" %></li>
+        </li>
+        <li class="nav-item">
+        <li><a class="nav-link" href="#">Sign In</a></li>
+        </li>
+        <li class="nav-item">
+        <li><a class="nav-link" href="#">Sign Out</a></li>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            User
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">My Account</a></li>
+            <li><a class="dropdown-item" href="#">My Quotes</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Add New Quote</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admin
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Admin Home</a></li>
+            <li><%= link_to 'Manage Users', users_path, class="dropdown-item" %></li>
+          </ul>
+        </li>
+
+        <!--
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+        -->
+      </ul>
+      <!--
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      -->
+    </div>
+  </div>
+
+):
+1:    <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+2:      <div class="container-fluid">
+3:        <!-- <a class="navbar-brand" href="#">MQ Home</a> -->
+4:        
+5:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+6:          <span class="navbar-toggler-icon"></span>
+7:        </button>
+8:        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+9:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+10:            <li class="nav-item">
+11:            <%= link_to "Home", root_path, class:"nav-link" %>
+12:            </li>
+13:            <li class="nav-item">
+14:            <li><a class="nav-link" href="#">Search</a></li>
+15:            </li>
+16:            <li class="nav-item">
+17:            <%= link_to "About", about_path, class:"nav-link" %>
+18:            </li>
+19:            <li class="nav-item">
+20:            <li><%= link_to 'Sign Up', new_user_path, class="nav-link" %></li>
+21:            </li>
+22:            <li class="nav-item">
+23:            <li><a class="nav-link" href="#">Sign In</a></li>
+24:            </li>
+25:            <li class="nav-item">
+26:            <li><a class="nav-link" href="#">Sign Out</a></li>
+27:            </li>
+28:            <li class="nav-item dropdown">
+29:              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+30:                User
+31:              </a>
+32:              <ul class="dropdown-menu">
+33:                <li><a class="dropdown-item" href="#">My Account</a></li>
+34:                <li><a class="dropdown-item" href="#">My Quotes</a></li>
+35:                <li><hr class="dropdown-divider"></li>
+36:                <li><a class="dropdown-item" href="#">Add New Quote</a></li>
+37:              </ul>
+38:            </li>
+39:    
+40:            <li class="nav-item dropdown">
+41:              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+42:                Admin
+43:              </a>
+44:              <ul class="dropdown-menu">
+45:                <li><a class="dropdown-item" href="#">Admin Home</a></li>
+46:                <li><%= link_to 'Manage Users', users_path, class="dropdown-item" %></li>
+47:              </ul>
+48:            </li>
+49:    
+50:            <!--
+51:            <li class="nav-item">
+52:              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+53:            </li>
+54:            -->
+55:          </ul>
+56:          <!--
+57:          <form class="d-flex" role="search">
+58:            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+59:            <button class="btn btn-outline-success" type="submit">Search</button>
+60:          </form>
+61:          -->
+62:        </div>
+63:      </div>
+  
+app/views/layouts/_header.html.erb:20: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:46: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:20: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:46: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:20: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:46: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:20: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:46: syntax error, unexpected '='
+app/views/layouts/application.html.erb:18
+Started GET "/" for 127.0.0.1 at 2024-10-13 08:39:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 295)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 449)
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 31803)
+Completed 200 OK in 58ms (Views: 52.2ms | ActiveRecord: 0.0ms | Allocations: 35836)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-13 08:39:06 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 35.1ms | Allocations: 4655)
+  Rendered users/new.html.erb within layouts/application (Duration: 42.5ms | Allocations: 4965)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered layout layouts/application.html.erb (Duration: 47.4ms | Allocations: 6525)
+Completed 200 OK in 121ms (Views: 54.8ms | ActiveRecord: 0.7ms | Allocations: 15216)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-13 08:40:43 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 295)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 512)
+  Rendered layout layouts/application.html.erb (Duration: 54.5ms | Allocations: 31937)
+Completed 200 OK in 65ms (Views: 57.1ms | ActiveRecord: 0.0ms | Allocations: 35970)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-10-13 08:40:45 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/_user.html.erb (Duration: 4.1ms | Allocations: 2128)
+  Rendered users/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 9423)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 9512)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.1ms | Allocations: 12583)
+
+
+  
+ActionView::Template::Error (undefined method `passwordSalt' for #<User id: 1, fname: "John", lname: "Jones", email: "admin@myquotes.com", password_digest: [FILTERED], isAdmin: true, status: "Active", created_at: "2024-10-11 06:16:58.379076000 +0000", updated_at: "2024-10-11 06:16:58.379076000 +0000">):
+    21: 
+    22:   <p>
+    23:     <strong>Passwordsalt:</strong>
+    24:     <%= user.passwordSalt %>
+    25:   </p>
+    26: 
+    27:   <p>
+  
+app/views/users/_user.html.erb:24
+app/views/users/index.html.erb:7
+app/views/users/index.html.erb:6
+Started GET "/users" for 127.0.0.1 at 2024-10-13 08:42:09 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/_user.html.erb (Duration: 2.1ms | Allocations: 2134)
+  Rendered users/index.html.erb within layouts/application (Duration: 21.0ms | Allocations: 9720)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 9820)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.8ms | Allocations: 16181)
+
+
+  
+ActionView::Template::Error (undefined method `passwordSalt' for #<User id: 1, fname: "John", lname: "Jones", email: "admin@myquotes.com", password_digest: [FILTERED], isAdmin: true, status: "Active", created_at: "2024-10-11 06:16:58.379076000 +0000", updated_at: "2024-10-11 06:16:58.379076000 +0000">):
+    21: 
+    22:   <p>
+    23:     <strong>Passwordsalt:</strong>
+    24:     <%= user.passwordSalt %>
+    25:   </p>
+    26: 
+    27:   <p>
+  
+app/views/users/_user.html.erb:24
+app/views/users/index.html.erb:7
+app/views/users/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2024-10-13 08:42:14 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 106)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 506)
+  Rendered layout layouts/application.html.erb (Duration: 79.9ms | Allocations: 31404)
+Completed 200 OK in 83ms (Views: 81.9ms | ActiveRecord: 0.0ms | Allocations: 32139)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-10-13 08:42:16 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/_user.html.erb (Duration: 1.2ms | Allocations: 1259)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2145)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2233)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2490)
+
+
+  
+ActionView::Template::Error (undefined method `passwordSalt' for #<User id: 1, fname: "John", lname: "Jones", email: "admin@myquotes.com", password_digest: [FILTERED], isAdmin: true, status: "Active", created_at: "2024-10-11 06:16:58.379076000 +0000", updated_at: "2024-10-11 06:16:58.379076000 +0000">):
+    21: 
+    22:   <p>
+    23:     <strong>Passwordsalt:</strong>
+    24:     <%= user.passwordSalt %>
+    25:   </p>
+    26: 
+    27:   <p>
+  
+app/views/users/_user.html.erb:24
+app/views/users/index.html.erb:7
+app/views/users/index.html.erb:6
+Started GET "/users" for 127.0.0.1 at 2024-10-13 08:42:16 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/_user.html.erb (Duration: 0.8ms | Allocations: 1257)
+  Rendered users/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3762)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3850)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms | Allocations: 12514)
+
+
+  
+ActionView::Template::Error (undefined method `passwordSalt' for #<User id: 1, fname: "John", lname: "Jones", email: "admin@myquotes.com", password_digest: [FILTERED], isAdmin: true, status: "Active", created_at: "2024-10-11 06:16:58.379076000 +0000", updated_at: "2024-10-11 06:16:58.379076000 +0000">):
+    21: 
+    22:   <p>
+    23:     <strong>Passwordsalt:</strong>
+    24:     <%= user.passwordSalt %>
+    25:   </p>
+    26: 
+    27:   <p>
+  
+app/views/users/_user.html.erb:24
+app/views/users/index.html.erb:7
+app/views/users/index.html.erb:6
+Started GET "/users" for 127.0.0.1 at 2024-10-13 08:43:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/_user.html.erb (Duration: 0.8ms | Allocations: 336)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered users/index.html.erb within layouts/application (Duration: 43.8ms | Allocations: 8687)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 99.6ms | Allocations: 39902)
+Completed 200 OK in 117ms (Views: 101.6ms | ActiveRecord: 0.9ms | Allocations: 46316)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-10-13 08:43:51 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.4ms | Allocations: 28)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 804)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2315)
+Completed 200 OK in 18ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 5041)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-13 08:43:57 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 19.1ms | Allocations: 7305)
+  Rendered users/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 7598)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 9117)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms | Allocations: 9489)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-13 08:54:41 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 20.7ms | Allocations: 4637)
+  Rendered users/new.html.erb within layouts/application (Duration: 22.1ms | Allocations: 5180)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 416)
+  Rendered layout layouts/application.html.erb (Duration: 70.8ms | Allocations: 36216)
+Completed 200 OK in 94ms (Views: 73.5ms | ActiveRecord: 0.6ms | Allocations: 48232)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-13 08:58:09 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 12.0ms | Allocations: 4533)
+  Rendered users/new.html.erb within layouts/application (Duration: 13.5ms | Allocations: 5077)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 416)
+  Rendered layout layouts/application.html.erb (Duration: 61.7ms | Allocations: 36064)
+Completed 200 OK in 85ms (Views: 64.2ms | ActiveRecord: 0.5ms | Allocations: 48082)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-10-13 08:58:25 +0000
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 201)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1916)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 2614)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-13 08:58:25 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 106)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 201)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 1933)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 2585)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-10-13 08:58:27 +0000
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1693)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 1959)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-13 08:58:30 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.9ms | Allocations: 2199)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2288)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3807)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4096)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-13 08:58:31 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.3ms | Allocations: 2186)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2275)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3794)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 4081)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-10-13 08:58:58 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/_user.html.erb (Duration: 0.6ms | Allocations: 309)
+  Rendered users/_user.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered users/index.html.erb within layouts/application (Duration: 26.6ms | Allocations: 6013)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 7546)
+Completed 200 OK in 32ms (Views: 18.5ms | ActiveRecord: 12.3ms | Allocations: 7958)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-10-13 09:00:47 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/_user.html.erb (Duration: 0.8ms | Allocations: 313)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/index.html.erb within layouts/application (Duration: 21.7ms | Allocations: 8647)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 70.6ms | Allocations: 39733)
+Completed 200 OK in 88ms (Views: 72.7ms | ActiveRecord: 0.8ms | Allocations: 46147)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-10-13 09:01:57 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/_user.html.erb (Duration: 2.7ms | Allocations: 313)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/index.html.erb within layouts/application (Duration: 28.3ms | Allocations: 8647)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 111.6ms | Allocations: 39737)
+Completed 200 OK in 134ms (Views: 115.2ms | ActiveRecord: 1.0ms | Allocations: 46151)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-10-13 09:22:24 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/_user.html.erb (Duration: 0.7ms | Allocations: 313)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/index.html.erb within layouts/application (Duration: 22.5ms | Allocations: 8659)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 95.9ms | Allocations: 39721)
+Completed 200 OK in 136ms (Views: 99.0ms | ActiveRecord: 0.8ms | Allocations: 46141)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-10-13 09:22:26 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 808)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2319)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.2ms | Allocations: 5045)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-13 09:22:34 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 12.3ms | Allocations: 4080)
+  Rendered users/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 4374)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 5893)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 6265)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-10-13 09:22:36 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1504)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3023)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 3304)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-10-13 09:22:37 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 582)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2093)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 2870)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2024-10-13 09:22:38 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 585)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2110)
+Completed 200 OK in 37ms (Views: 9.6ms | ActiveRecord: 0.2ms | Allocations: 2916)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2024-10-13 09:22:41 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 5.9ms | Allocations: 2311)
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2602)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4116)
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 0.1ms | Allocations: 4938)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-10-13 09:22:46 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1504)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 3022)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.1ms | Allocations: 3298)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-13 09:23:18 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.1ms | Allocations: 2222)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2311)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3829)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 4111)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-10-13 09:25:06 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/_user.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1483)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3001)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 3277)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-10-13 09:25:14 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 573)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2084)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 2856)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2024-10-13 09:25:15 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.7ms | Allocations: 2284)
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2409)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3919)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 4684)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-10-13 09:25:18 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 570)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2080)
+Completed 200 OK in 21ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 2845)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-10-13 09:25:21 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 579)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2089)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 2854)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-10-13 09:25:30 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1495)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3013)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 3290)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-10-13 09:25:50 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 573)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2083)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 2848)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-10-13 09:39:18 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 295)
+Started GET "/users/new" for 127.0.0.1 at 2024-10-13 09:39:18 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 13.5ms | Allocations: 6550)
+  Rendered users/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 8350)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 782)
+  Rendered layout layouts/application.html.erb (Duration: 118.4ms | Allocations: 55198)
+Completed 200 OK in 129ms (Views: 120.7ms | ActiveRecord: 0.0ms | Allocations: 59309)
+
+
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 169)
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 28373)
+Completed 200 OK in 104ms (Views: 41.3ms | ActiveRecord: 1.3ms | Allocations: 52735)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-10-13 09:39:19 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1633)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3153)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 3565)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-10-13 09:39:24 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 17.9ms | Allocations: 2195)
+  Rendered users/new.html.erb within layouts/application (Duration: 23.0ms | Allocations: 2284)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 3803)
+Completed 200 OK in 36ms (Views: 35.8ms | ActiveRecord: 0.0ms | Allocations: 4090)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-10-13 09:39:56 +0000
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"fname"=>"Max", "lname"=>"Burkerowe", "email"=>"test@thisisafakeemail.com", "password"=>"[FILTERED]", "isAdmin"=>"false", "status"=>"Active"}, "commit"=>"Submit"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:27:in `block in create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("fname", "lname", "email", "password_digest", "isAdmin", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Max"], ["lname", "Burkerowe"], ["email", "test@thisisafakeemail.com"], ["password_digest", "[FILTERED]"], ["isAdmin", 0], ["status", "Active"], ["created_at", "2024-10-13 09:39:56.676655"], ["updated_at", "2024-10-13 09:39:56.676655"]]
+  ↳ app/controllers/users_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (21.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 275ms (ActiveRecord: 22.5ms | Allocations: 4147)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2024-10-13 09:39:56 +0000
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.5ms | Allocations: 267)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1357)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2882)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 5538)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-10-13 09:39:57 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1211)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2730)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 3006)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-10-13 09:40:11 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1199)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2719)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.1ms | Allocations: 2995)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-10-13 09:40:24 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1199)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2718)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 2994)
+
+
+Started GET "/" for 127.0.0.1 at 2024-10-13 09:40:54 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 106)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 201)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 1915)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 2567)
+
+
+Started GET "/users" for 127.0.0.1 at 2024-10-13 09:41:00 +0000
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1197)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2716)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 2993)
+
+

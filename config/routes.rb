@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get 'about/index'
   root 'home#index'
-  #resources :quote_categories
-  #resources :quotes
+  get '/about', to: 'about#index'
+  resources :quote_categories
+  resources :quotes
   resources :authors
   resources :categories
   resources :users
