@@ -1,2 +1,13 @@
 <h1>Welcome to MyQuote!</h1>
 <p>Your trusted repository for all things historical quotes!</p>
+
+<h3>Recently Added Quotes </h3>
+<hr />
+<% @quotes.each do |quote| %>
+    <div class="card bg-body-tertiary" style="margin-bottom:10px">
+    <div class="card-body">
+        <h5 class="card-title"><%= quote.quoteText %></h5>
+        <p class="card-text"><%= quote.comment %> <br />[<a href="/quotes/<%= quote.id %>"> Quote Details </a>] </p>
+    </div>
+    </div>
+<% end %>

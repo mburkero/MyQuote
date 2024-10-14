@@ -1,0 +1,35 @@
+<!-- search bar for search by quote category -->
+
+<h2 style="padding-top: 10px;">Quote search by category</h2>
+<%= form_tag search_path, method: :get do %>
+    <div class="form-group" style="padding-bottom: 10px;">
+
+    <!-- category_query query implementation is found in apps/controllers/search_controller.rb -->
+
+    <%= text_field_tag :category_query, params[:category_query], placeholder: 'Enter a category', class: "form-control" %>
+    </div>
+    <%= submit_tag 'Search Quotes', class: "btn btn-primary" %>
+<% end %>
+
+<!-- displaying results of the quote search -->
+
+<!-- results are only dispalyed if the category_query has actually been run -->
+
+<% if params[:category_query].present? %>
+    
+<!-- rendering the results only if any results have actually been found -->
+
+    <% if @quote_match.present? %>
+        <h4 style="padding-top: 15px;">Results:</h4>
+            <% @quote_match.each.do |quote| %>
+                <div class="card bg-body-tertiary" style="margin-bottom:10px">
+                <div class="card-body">
+                    <h5 class="card-title"><%= quote.quoteText %></h5>
+                    <p class="card-text"><%= quote.comment %> <br />[<a href="/quotes/<%= quote.id %>"> Quote Details </a>] </p>
+                </div>
+                </div>
+            <% end
+    <% else %>
+        <p>No matching quotes found.</p>
+    <% end %>
+<% end %>

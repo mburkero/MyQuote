@@ -65,6 +65,6 @@ class QuotesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def quote_params
-      params.require(:quote).permit(:quoteText, :dateOfAddition, :yearOfPublication, :comment, :isQuotePublic, :user_id, :quote_id)
+      params.require(:quote).permit(:quoteText, :yearOfPublication, :comment, :isQuotePublic, :user_id, :author_id)
     end
 end
