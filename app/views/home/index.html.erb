@@ -7,7 +7,26 @@
     <div class="card bg-body-tertiary" style="margin-bottom:10px">
     <div class="card-body">
         <h5 class="card-title"><%= quote.quoteText %></h5>
-        <p class="card-text"><%= quote.comment %> <br />[<a href="/quotes/<%= quote.id %>"> Quote Details </a>] </p>
+        <p class="card-text">- <%= quote.authName%>
+        <% if !quote.authByear.nil? && !quote.authDyear.nil? %> <!-- if both birth and death year are known -->
+            , <%= quote.authByear %> - <%= quote.authDyear %>,
+        <% elsif !quote.authByear.nil? && quote.authDyear.nil? %> <!-- if birth year is known but death is not, assume author is still alive -->
+            , born <%= quote.authByear %>, 
+        <% elsif quote.authByear.nil? && !quote.authDyear.nil? %> <!-- if birth year is not known but death year is known -->
+            , died <%= quote.authDyear %>, 
+        <% else %> <!-- if neither birth year or death year is known, display nothing -->
+        <% end %>
+        <% if !quote.yearOfPublication.nil? %> <!-- if year of publication is known -->
+            published in the year <%= quote.yearOfPublication %>
+        <% end %>
+        </p>
+        <% if !quote.biography.nil? %> <!-- if a biography of the author has been supplied -->
+            <p class="card-text">About <%= quote.authName %>: <%= quote.biography %> </p>
+        <% end %>
+        <p class="card-text">Collected by <%= quote.fname %></p>
+        <% if !quote.comment.nil? %> <!-- if a comment has been supplied -->
+            <p class="card-text">Comment: <%= quote.comment %></p>
+        <% end %>
     </div>
     </div>
 <% end %>

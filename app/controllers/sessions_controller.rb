@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
     #rendering login screen
-    def login
+    def new
     end
 
     #login process logic
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
             end
         else #if login credentials don't match, reset login sheet
             flash.now[:error] = "Invalid email or password. Try again!"
-            render 'login'
+            render 'new'
         end
     end
     #handling logout process

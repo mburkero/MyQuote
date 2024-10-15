@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   
   get '/admin', to: 'home#aindex'
   get '/userhome', to: 'home#uindex'
-  get '/your-recipes', to: 'home#urecipes'
+  get '/your-quotes', to: 'home#uquotes'
 
   # session routes
   get 'login', to: 'sessions#new'
