@@ -2,6 +2,15 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/about', to: 'about#index'
   get '/search', to: "search#index"
+  
+  get '/admin', to: 'home#aindex'
+  get '/userhome', to: 'home#uindex'
+  get '/your-recipes', to: 'home#urecipes'
+
+  # session routes
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
   resources :quote_categories
   resources :quotes
   resources :authors
