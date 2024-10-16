@@ -13,6 +13,7 @@ class QuotesController < ApplicationController
   # GET /quotes/new
   def new
     @quote = Quote.new
+    8.times {@quote.quote_categories.build} #builds 8 quote category fields
   end
 
   # GET /quotes/1/edit

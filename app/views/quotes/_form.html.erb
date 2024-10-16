@@ -1,52 +1,84 @@
 <%= form_with(model: quote) do |form| %>
-  <% if quote.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
-
+  <% if @quote.errors.any? %>
+    <div class="alert alert-danger">
       <ul>
-        <% quote.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+        <% @quote.errors.full_message.each do |msg| %>
+          <li><%= msg %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :quoteText, style: "display: block" %>
-    <%= form.text_area :quoteText %>
-  </div>
+  <%= form.with(model: @quote, url: quotes_path, method: :post, local: true) do |form| %>
+    <!-- getting user id of the form from the session, should be inaccessible for logged out users -->
+    <%= form.hidden_field :user_id, value: current_user.id %>
 
-  <div>
-    <%= form.label :dateOfAddition, style: "display: block" %>
-    <%= form.datetime_field :dateOfAddition %>
-  </div>
+    <!-- non-hidden form fields, rendered using Bootstrap -->
+    <div class="form-group" style="padding-bottom: 10px;">
+      <%= form.text_field :quoteText, placeholder: 'Enter quote here', class: 'form-control' %><p style:"color: red>*</p>
+    </div>
+    <div class="form-group" style="padding-bottom: 10px;">
+      <%= form.text_field :yearOfPublication, placeholder: 'Enter publication year (if known)', class: 'form-control' %>
+    </div>
+    <div class="form-group" style="padding-bottom: 10px;">
+      <%= form.text_field :comment, placeholder: 'Enter comment (optional)', class: 'form-control' %>
+    </div>
+    <div class="form-group" style="padding-bottom: 10px;">
+      <%= form.label :isQuotePublic do %>
+      Public
+        <%= form.check_box :isQuotePublic, class: "form-check-input" %>
+      <% end %>
+    </div>
 
-  <div>
-    <%= form.label :yearOfPublication, style: "display: block" %>
-    <%= form.text_field :yearOfPublication %>
-  </div>
+    <!-- handling quote categories -->
+    <div id="categories-container">
+        <% @quote.quote_categories.each do |quote_category| %>
+          <%= form.fields_for :quote_categories, quote_category do |qc| %>
+            <div class="quote-category row mb-2">
+            <div class="col-auto">
+              <%= qc.label :category_id, "Category", class: "form-label d-inline-block me-2" %>
+              <%= qc.select :category_id, Category.all.collect {|cat| [cat.categoryName, cat.id]}, {include_blank: true}, class: "form-control d-inline-block" %>
+            </div>
+            <div class="col-auto align-self-end">
+              <%= link_to '[-] Remove this category', '#', class: 'remove-category', style: "color: red; text-decoration: none;" %>
+            </div>
+            </div>
+          <% end %>
+        <% end %>
+    </div>
+    <!-- handling authors -->
+    <div class "form-group" style="padding-bottom: 10px">
+      <%= form.select :author_id, Author.all.collect {|auth| [auth.authName, auth.author_id]}, {include_blank: true}, class: "form-control d-inline-block" %>
+    </div>
 
-  <div>
-    <%= form.label :comment, style: "display: block" %>
-    <%= form.text_area :comment %>
-  </div>
+    <!-- submit button -->
+    <div class="mt-3">
+      <%= form.submit 'Create Quote', class: 'btn btn-primary btn-lg' %>
+    </div>
 
-  <div>
-    <%= form.label :isQuotePublic, style: "display: block" %>
-    <%= form.check_box :isQuotePublic %>
-  </div>
+    <!-- javascript to drive the quote category handling -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener('click', function(e) {
+        if (e.target && e.target.classList.contains('remove-category')) {
+          e.preventDefault();
+          const categoryFields = document.querySelectorAll('.category-field');
+          if (categoryFields.length > 1) {
+            e.target.closest('.category-field').remove();
+          }
+        }
+      });
+    });
+    </script
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div>
 
-  <div>
-    <%= form.label :quote_id, style: "display: block" %>
-    <%= form.text_field :quote_id %>
-  </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+
+
+
+
+
+
+
+
+  
