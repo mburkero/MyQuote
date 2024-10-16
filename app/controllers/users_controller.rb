@@ -17,6 +17,16 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
+    if logged_in? #if there is an active session
+      if current_user.id == @user.id || is_administrator? #if current user is the target user or an admin, grant access (by doing nothing).
+      else #if current user is not the target user, deny access and return to launch page
+        flash[:error] = "You are not authorised to access this resource"
+      redirect_to userhome_path
+      end
+    else #if there is not an active session
+      flash[:error] = "you are not authorised to access this resource"
+      redirect_to login_path
+    end
   end
 
   # GET /users/new
@@ -26,6 +36,16 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    if logged_in? #if there is an active session
+      if current_user.id == @user.id || is_administrator? #if current user is the target user or an admin, grant access (by doing nothing).
+      else #if current user is not the target user, deny access and return to launch page
+        flash[:error] = "You are not authorised to access this resource"
+      redirect_to userhome_path
+      end
+    else #if there is not an active session
+      flash[:error] = "you are not authorised to access this resource"
+      redirect_to login_path
+    end
   end
 
   # POST /users or /users.json

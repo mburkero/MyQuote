@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: %i[ show edit update destroy ]
-  before_action :require_login, except: [:index, :show]
+  before_action :require_login, except: [ :show]
 
   # GET /quotes or /quotes.json
   def index
@@ -9,6 +9,16 @@ class QuotesController < ApplicationController
 
   # GET /quotes/1 or /quotes/1.json
   def show
+    if logged_in? #if there is an active session
+      if current_user.id == @quote.user_id #if current user is the uploader, grant access (by doing nothing).
+      else #if current user is not the uploader, deny access and return to launch page
+        flash[:error] = "You are not authorised to access this resource"
+        redirect_to userhome_path
+      end
+    else #if there is not an active session
+      flash[:error] = "you are not authorised to access this resource"
+      redirect_to login_path
+    end
   end
 
   # GET /quotes/new
@@ -19,6 +29,16 @@ class QuotesController < ApplicationController
 
   # GET /quotes/1/edit
   def edit
+    if logged_in? #if there is an active session
+      if current_user.id == @quote.user_id #if current user is the uploader, grant access (by doing nothing).
+      else #if current user is not the uploader, deny access and return to launch page
+        flash[:error] = "You are not authorised to access this resource"
+        redirect_to userhome_path
+      end
+    else #if there is not an active session
+      flash[:error] = "you are not authorised to access this resource"
+      redirect_to login_path
+    end
   end
 
   # POST /quotes or /quotes.json

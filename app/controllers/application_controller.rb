@@ -1,15 +1,16 @@
 class ApplicationController < ActionController::Base
     helper_method :current_user, :logged_in?, :is_administrator?
 
-    def current_user
+    #helper methods used in session management processes
+    def current_user #returns the user who is currently logged in
         @current_user ||= User.find_by(id: session[:user_id])
     end
 
-    def logged_in?
+    def logged_in? #returns true if a user is logged in, false if not
         !current_user.nil?
     end
 
-    def is_administrator?
+    def is_administrator? #returns whether the session holder is an admin or not
         session[:isAdmin]
     end
 

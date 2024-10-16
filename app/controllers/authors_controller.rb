@@ -1,5 +1,6 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: %i[ show edit update destroy ]
+  before_action :require_login
 
   # GET /authors or /authors.json
   def index
@@ -8,6 +9,16 @@ class AuthorsController < ApplicationController
 
   # GET /authors/1 or /authors/1.json
   def show
+    if logged_in? #if there is an active session
+      if is_administrator? #if current user is an admin, grant access (by doing nothing).
+      else #if current user is not admin, deny access and return to launch page
+        flash[:error] = "You are not authorised to access this resource"
+      redirect_to userhome_path
+      end
+    else #if there is not an active session, return to login page
+      flash[:error] = "you are not authorised to access this resource"
+      redirect_to login_path
+    end
   end
 
   # GET /authors/new
@@ -17,6 +28,16 @@ class AuthorsController < ApplicationController
 
   # GET /authors/1/edit
   def edit
+    if logged_in? #if there is an active session
+      if is_administrator? #if current user is an admin, grant access (by doing nothing).
+      else #if current user is not admin, deny access and return to launch page
+        flash[:error] = "You are not authorised to access this resource"
+      redirect_to userhome_path
+      end
+    else #if there is not an active session, return to login page
+      flash[:error] = "you are not authorised to access this resource"
+      redirect_to login_path
+    end
   end
 
   # POST /authors or /authors.json

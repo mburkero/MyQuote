@@ -6,5 +6,7 @@
   <%= link_to "Edit this author", edit_author_path(@author) %> |
   <%= link_to "Back to authors", authors_path %>
 
-  <%= button_to "Destroy this author", @author, method: :delete %>
+  <div style="padding-top: 20px;">
+  <%= button_to "Delete Account", @author, method: :delete, class: 'btn btn-danger' %>
+  </div>
 </div>

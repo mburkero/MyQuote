@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
                 redirect_to userhome_path, notice: "Logged in successfully!"
             end
         else #if login credentials don't match, reset login sheet
-            flash.now[:error] = "Invalid email or password. Try again!"
+            flash.now[:error] = "Invalid email or password. Try again."
             render 'new'
         end
     end
