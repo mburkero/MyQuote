@@ -9,13 +9,18 @@
     </div>
   <% end %>
 
-  <%= form.with(model: @quote, url: quotes_path, method: :post, local: true) do |form| %>
+  <%= form_with(model: @quote, url: quotes_path, method: :post, local: true) do |form| %>
     <!-- getting user id of the form from the session, should be inaccessible for logged out users -->
     <%= form.hidden_field :user_id, value: current_user.id %>
 
     <!-- non-hidden form fields, rendered using Bootstrap -->
     <div class="form-group" style="padding-bottom: 10px;">
-      <%= form.text_field :quoteText, placeholder: 'Enter quote here', class: 'form-control' %><p style:"color: red>*</p>
+      <%= form.text_field :quoteText, placeholder: 'Enter quote here', class: 'form-control' %>
+    </div>
+    <!-- handling authors -->
+    <div class "form-group" style="padding-bottom: 10px">
+      <%= form.label :author_id, "Author", class: "form-label d-inline-block me-2" %>
+      <%= form.select :author_id, Author.all.collect {|auth| [auth.authName, auth.id]}, {include_blank: true}, class: "form-control d-inline-block" %>
     </div>
     <div class="form-group" style="padding-bottom: 10px;">
       <%= form.text_field :yearOfPublication, placeholder: 'Enter publication year (if known)', class: 'form-control' %>
@@ -46,15 +51,13 @@
           <% end %>
         <% end %>
     </div>
-    <!-- handling authors -->
-    <div class "form-group" style="padding-bottom: 10px">
-      <%= form.select :author_id, Author.all.collect {|auth| [auth.authName, auth.author_id]}, {include_blank: true}, class: "form-control d-inline-block" %>
-    </div>
+
 
     <!-- submit button -->
     <div class="mt-3">
       <%= form.submit 'Create Quote', class: 'btn btn-primary btn-lg' %>
     </div>
+  <% end %>
 
     <!-- javascript to drive the quote category handling -->
     <script>
@@ -69,8 +72,8 @@
         }
       });
     });
-    </script
-
+    </script>
+<% end %>
 
 
 

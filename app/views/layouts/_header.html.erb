@@ -39,8 +39,10 @@
           <ul class="dropdown-menu">
             <li><%= link_to "My Account", userhome_path, class:"dropdown-item" %></li>
             <li><%= link_to "My Quotes", your_quotes_path, class:"dropdown-item" %></li>
+            <li><%= link_to "Manage Quotes", quotes_path, class:"dropdown-item" %></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Add New Recipe</a></li>
+            <li><%= link_to "Add New Quote", new_quote_path, class:"dropdown-item" %></li>
+            <li><%= link_to "Add New Author", new_author_path, class:"dropdown-item" %></li>
           </ul>
         </li>
         <% end %>

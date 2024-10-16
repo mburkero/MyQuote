@@ -12,22 +12,19 @@
   <% end %>
  <!-- sign up sheet -->
   <div class="form-group" style="padding-bottom: 10px;">
-    <!-- <%= form.label :fname, style: "display: block" %> -->
     <%= form.text_field :fname, placeholder: 'First Name', class: 'form-control' %>
   </div>
 
   <div class="form-group" style="padding-bottom: 10px;">
-    <!-- <%= form.label :lname, style: "display: block" %> -->
     <%= form.text_field :lname, placeholder: 'Last Name', class: 'form-control' %>
   </div>
 
   <div class="form-group" style="padding-bottom: 10px;">
-    <!-- <%= form.label :email, style: "display: block" %> -->
     <%= form.text_field :email, placeholder: 'Email Address', class: 'form-control' %>
   </div>
 
+  <!-- users are secured using has_secure_password, this password will be salted and hashed -->
   <div class="form-group" style="padding-bottom: 10px;">
-    <!-- <%= form.label :password_digest, style: "display: block" %> -->
     <%= form.password_field :password, placeholder: 'Choose a strong password', class: 'form-control' %>
   </div>
 
@@ -47,7 +44,6 @@
   </div>
 
   <div>
-    <!-- <%= form.submit %> -->
     <%= form.submit 'Submit', class: 'btn btn-primary' %>
   </div>
 <% end %>

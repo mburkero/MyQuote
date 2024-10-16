@@ -11,37 +11,24 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :authFname, style: "display: block" %>
-    <%= form.text_field :authFname %>
+  <!-- author entry sheet -->
+  <div class="form-group", style="padding-bottom: 10px;">
+    <%= form.text_field :authName, placeholder: 'Whole name of Author', class: 'form-control' %>
+  </div>
+
+  <div class="form-group", style="padding-bottom: 10px;">
+    <%= form.text_field :authByear, placeholder: 'Birth year (if known)', class:'form-control' %>
+  </div>
+
+  <div class="form-group", style="padding-bottom: 10px;">
+    <%= form.text_field :authDyear, placeholder: 'Death year (if known)', class:'form-control' %>
+  </div>
+
+  <div class="form-group", style="padding-bottom: 10px;">
+    <%= form.text_field :biography, placeholder: 'Short biography (optional)', class:'form-control' %>
   </div>
 
   <div>
-    <%= form.label :authLname, style: "display: block" %>
-    <%= form.text_field :authLname %>
-  </div>
-
-  <div>
-    <%= form.label :authByear, style: "display: block" %>
-    <%= form.text_field :authByear %>
-  </div>
-
-  <div>
-    <%= form.label :authDyear, style: "display: block" %>
-    <%= form.text_field :authDyear %>
-  </div>
-
-  <div>
-    <%= form.label :biography, style: "display: block" %>
-    <%= form.text_area :biography %>
-  </div>
-
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit 'Submit', class: 'btn btn-primary' %>
   </div>
 <% end %>
