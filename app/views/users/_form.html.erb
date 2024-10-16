@@ -10,40 +10,53 @@
       </ul>
     </div>
   <% end %>
- <!-- sign up sheet -->
+
+  <!-- form has multiple modes dependent on session type. If no session is active (guest user) then it works as the sign up sheet. -->
+  <!-- if an admin session accesses this, it can see all of the fields but only edit isAdmin and status -->
+  <!-- if the user accesses this, they can all fields but isAdmin and status and edit all visible fields -->
   <div class="form-group" style="padding-bottom: 10px;">
-    <%= form.text_field :fname, placeholder: 'First Name', class: 'form-control' %>
+    <%= form.text_field :fname, placeholder: 'First Name', class: 'form-control', readonly: (logged_in? && is_administrator?) %>
   </div>
 
   <div class="form-group" style="padding-bottom: 10px;">
-    <%= form.text_field :lname, placeholder: 'Last Name', class: 'form-control' %>
+    <%= form.text_field :lname, placeholder: 'Last Name', class: 'form-control', readonly: (logged_in? && is_administrator?) %>
   </div>
 
   <div class="form-group" style="padding-bottom: 10px;">
-    <%= form.text_field :email, placeholder: 'Email Address', class: 'form-control' %>
+    <%= form.text_field :email, placeholder: 'Email Address', class: 'form-control', readonly: (logged_in? && is_administrator?) %>
   </div>
 
-  <!-- users are secured using has_secure_password, this password will be salted and hashed -->
   <div class="form-group" style="padding-bottom: 10px;">
-    <%= form.password_field :password, placeholder: 'Choose a strong password', class: 'form-control' %>
+    <%= form.password_field :password, placeholder: user.password_digest.present? ? 'Password set' : 'Choose a strong password', class: 'form-control', readonly: (logged_in? && is_administrator?) %>
   </div>
 
-
-  <div>
-  <!--
-    <%= form.label :isAdmin, style: "display: block" %>
-    <%= form.check_box :isAdmin %> -->
+  <div class="form-group" style="padding-bottom: 10px;">
+  <% if logged_in? && is_administrator? %>
+    <%= form.label :isAdmin do %>
+      Admin Role
+    <%= form.check_box :isAdmin %>
+  <% end %>
+  <% else %>
     <%= form.hidden_field :isAdmin, value: false %>
+  <% end %>
   </div>
 
-  <div>
-  <!--
-    <%= form.label :status, style: "display: block" %>
-    <%= form.text_field :status %> -->
+  <!-- if an admin user, select user status from one of three options and update admin status of users as well -->
+  <div class="form-group" style="padding-bottom: 10px;">
+  <% if logged_in? && is_administrator? %>
+    <%= form.select :status, ['Active', 'Suspended', 'Banned'], {}, class: 'form-control' %>
+  <% elsif logged_in? && !is_administrator? %>
+    <%= form.hidden_field :status %>
+  <% else %>
     <%= form.hidden_field :status, value: "Active" %>
+  <% end %>
   </div>
 
   <div>
+  <% if logged_in? %>
+	  <%= form.submit 'Update', class: 'btn btn-primary' %>
+  <% else %>
     <%= form.submit 'Submit', class: 'btn btn-primary' %>
+  <% end %>
   </div>
 <% end %>
